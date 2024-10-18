@@ -16,7 +16,7 @@ const ToDoListScreen = ({ navigation }) => {
         { key: Math.random().toString(), text: task, time: taskTime, completed: false },
       ]);
       setTask('');
-      setTaskTime(null); // Reseta o horário após adicionar a tarefa
+      setTaskTime(null);
     }
   };
 
@@ -86,7 +86,7 @@ const ToDoListScreen = ({ navigation }) => {
           <View style={styles.taskContainer}>
             <TouchableOpacity onPress={() => toggleTaskCompletion(item.key)} style={styles.taskItem}>
               <Text style={item.completed ? styles.completedText : styles.pendingText}>
-                {item.text} {item.time && `- ${item.time.toLocaleTimeString()}`} {/* Exibe o horário se estiver definido */}
+                {item.text} {item.time && `- ${item.time.toLocaleTimeString()}`}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.deleteButton} onPress={() => removeTask(item.key)}>
