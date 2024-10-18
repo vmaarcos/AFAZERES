@@ -5,7 +5,7 @@ const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image 
-        source={require('./assets/TODO.png')} // Adicione a imagem na pasta assets
+        source={require('./assets/TODO.png')} 
         style={styles.image}
       />
       <Text style={styles.welcomeText}>Bem-vindo ao AFAZERES</Text>
